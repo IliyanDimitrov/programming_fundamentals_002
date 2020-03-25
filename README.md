@@ -1,5 +1,10 @@
 # Week 1 - Programming Fundamentals
 
+# Important
+
+Answers to the questions can be found in WRITTEN-QUESTIONS-ANSWERS.md
+
+
 # Conditionals and Loops
 
 ## Introduction

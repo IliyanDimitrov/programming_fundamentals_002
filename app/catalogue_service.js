@@ -23,23 +23,62 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length;
 }
 
 function checkBook(book) {
-  // Your code here
+
+  let match = false;
+
+  for(let books of catalogue) {
+    if(book === books) {
+      match = true;
+    }
+  } 
+
+  return match;
 }
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+
+  let total = 0;
+
+  for(let books of catalogue){
+    if(books.charAt(0).toUpperCase() === letter.toUpperCase()){
+      total++;
+    }
+  }
+
+  return total;
 }
 
 function countBooksByKeyword(keyword) {
-  // Your code here
+  
+  let total = 0;
+  
+  for(let books of catalogue) {
+    if(typeof keyword !== 'string') {
+
+      return "Invalid Input";
+
+    } else if(books.toUpperCase().indexOf(keyword.toUpperCase()) >= 0){
+      total++;
+    }
+  }
+  return total;
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+
+  let total = [];
+
+
+  for(let books of catalogue) {
+    if(books.toUpperCase().includes(author.toUpperCase())){
+      total.push(books);
+    }
+  }
+  return total;
 }
 
 module.exports = {
