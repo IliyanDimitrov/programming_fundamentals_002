@@ -75,8 +75,8 @@ describe("catalogueService", () => {
       ]);
     });
 
-    test("returns list of books by a given author", () => {
-      expect(catalogueService.getBooksByAuthor("Charl")).toEqual([]);
+    test("returns list of books by a given author none if author not present", () => {
+      expect(catalogueService.getBooksByAuthor("William Shakespeare")).toEqual([]);
     });
   });
 
